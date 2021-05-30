@@ -1,3 +1,6 @@
 {
+    "markdown.preview.openMarkdownLinks": "inEditor",
+    "dart.flutterHotReloadOnSave": "always",
+    "files.autoSave": "off",
     "dart.previewFlutterUiGuides": true
 }
