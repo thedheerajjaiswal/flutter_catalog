@@ -2,17 +2,6 @@ import 'dart:convert';
 
 class CatalogModal {
   static List<Item> items = [];
-  //= [
-  //   Item(
-  //     id: 01,
-  //     name: 'Apple iPhone11',
-  //     desc: 'The smartphone comes with a 6.1 inches Liquid Retina IPS LCD',
-  //     price: 699.00,
-  //     color: 'white',
-  //     image:
-  //         'https://www.gizmochina.com/wp-content/uploads/2019/09/Apple-iPhone-11-1-500x500.jpg',
-  //   ),
-  // ];
 }
 
 class Item {

@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       //For removing the debug logo from app
       debugShowCheckedModeBanner: false,
 
-      initialRoute: MyRoutes.loginRoutes,
+      initialRoute: MyRoutes.homeRoutes,
       routes: {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoutes: (context) => HomePage(),
