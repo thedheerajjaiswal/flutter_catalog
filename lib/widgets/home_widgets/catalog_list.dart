@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/pages/home_detail_page.dart';
 import 'package:flutter_catalog/widgets/home_widgets/catalog_image.dart';
-import 'package:flutter_catalog/widgets/themes.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 
 class CatalogList extends StatelessWidget {
@@ -47,14 +47,18 @@ class CatalogItem extends StatelessWidget {
             tag: Key(catalog.id.toString()),
             child: CatalogImage(
               image: catalog.image,
-            ),
+            ).p0(),
           ),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
+                catalog.name.text.lg
+                    .color(context.accentColor)
+                    .bold
+                    .make()
+                    .p4(),
                 catalog.desc.text.textStyle(context.captionStyle!).make(),
                 15.heightBox,
                 ButtonBar(
@@ -66,21 +70,21 @@ class CatalogItem extends StatelessWidget {
                       onPressed: () {},
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all(
-                          MyTheme.darkBluishColor,
+                          context.theme.buttonColor,
                         ),
                         shape: MaterialStateProperty.all(
                           StadiumBorder(),
                         ),
                       ),
-                      child: "Buy".text.make(),
+                      child: "Add to Cart".text.sm.make(),
                     )
                   ],
-                ).pOnly(right: 16)
+                ).pOnly(right: 8.0)
               ],
             ),
           )
         ],
       ),
-    ).py4.white.rounded.make().py16();
+    ).color(context.cardColor).rounded.make().py12();
   }
 }
