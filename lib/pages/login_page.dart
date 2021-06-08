@@ -38,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
               Image.asset(
                 "assets/images/login_image.png",
                 fit: BoxFit.cover,
-                height: 250,
+                height: 300,
               ),
               // SizedBox(
               //   height: 10.0,
@@ -47,6 +47,7 @@ class _LoginPageState extends State<LoginPage> {
                 'Welcome $userName',
                 style: TextStyle(
                   fontSize: 28,
+                  color: context.accentColor,
                   fontWeight: FontWeight.bold,
                 ),
               ),

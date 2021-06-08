@@ -11,10 +11,10 @@ class MyTheme {
         buttonColor: darkBluishColor,
         accentColor: darkBluishColor,
         appBarTheme: AppBarTheme(
-          color: Colors.white,
+          color: Colors.black,
           elevation: 0.0,
           iconTheme: IconThemeData(
-            color: Colors.white,
+            color: Colors.black,
           ),
           textTheme: Theme.of(context).textTheme,
         ),
@@ -30,10 +30,11 @@ class MyTheme {
         appBarTheme: AppBarTheme(
           color: Colors.black,
           elevation: 0.0,
-          iconTheme: IconThemeData(
-            color: Colors.white,
-          ),
-          textTheme: Theme.of(context).textTheme,
+          iconTheme: IconThemeData(color: Colors.white),
+          textTheme: Theme.of(context).textTheme.copyWith(
+                headline6:
+                    context.textTheme.headline6!.copyWith(color: Colors.white),
+              ),
         ),
       );
 
