@@ -9,6 +9,7 @@ import 'package:flutter_catalog/models/cart.dart';
 import 'package:flutter_catalog/utils/routes.dart';
 import 'package:flutter_catalog/widgets/home_widgets/catalog_header.dart';
 import 'package:flutter_catalog/widgets/home_widgets/catalog_list.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 import 'package:http/http.dart' as http;
 
@@ -60,10 +61,10 @@ class _HomePageState extends State<HomePage> {
             color: Colors.white,
           ),
         ).badge(
-          color: Vx.red800,
+          color: context.accentColor,
           size: 22,
-          textStyle:
-              TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          textStyle: TextStyle(
+              fontWeight: FontWeight.bold, color: context.canvasColor),
           count: _cart.items.length,
         ),
       ),
