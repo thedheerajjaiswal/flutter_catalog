@@ -7,6 +7,7 @@ import 'package:flutter_catalog/core/store.dart';
 import 'package:flutter_catalog/models/cart.dart';
 
 import 'package:flutter_catalog/utils/routes.dart';
+
 import 'package:flutter_catalog/widgets/home_widgets/catalog_header.dart';
 import 'package:flutter_catalog/widgets/home_widgets/catalog_list.dart';
 
@@ -54,7 +55,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: VxBuilder(
         mutations: {AddMutation, RemoveMutation},
         builder: (context, store, status) => FloatingActionButton(
-          onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+          onPressed: () => context.vxNav.push(Uri.parse(MyRoutes.cartRoute)),
           backgroundColor: context.theme.buttonColor,
           child: Icon(
             CupertinoIcons.cart,
